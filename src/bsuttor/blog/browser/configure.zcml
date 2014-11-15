@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="bsuttor.blog">
+
+    <!-- Publish static files -->
+    <browser:resourceDirectory
+      name="bsuttor.blog"
+      directory="static"
+      />
+
+</configure>

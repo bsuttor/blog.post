@@ -1,0 +1,25 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="bsuttor.blog">
+
+
+  <include file="configure.zcml" />
+  <!-- Register the installation GenericSetup extension profile -->
+  <genericsetup:registerProfile
+      name="testing"
+      title="bsuttor.blog test"
+      directory="profiles/testing"
+      description="bsuttor.blog desc"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  <genericsetup:importStep
+      name="bsuttor.blog.tests_content"
+      title="bsuttor.blog test"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler=".setuphandlers.testSetup">
+  </genericsetup:importStep>
+
+</configure>
