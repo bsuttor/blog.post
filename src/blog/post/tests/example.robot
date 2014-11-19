@@ -11,7 +11,7 @@ Suite Teardown  Close all browsers
 *** Test Cases ***
 Site Administrator can view homepage
     Go to homepage
-    Page should contain  bsuttor.blog
+    Page should contain  Blog post
 
 
 *** Keywords ***

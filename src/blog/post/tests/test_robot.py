@@ -3,7 +3,7 @@ from plone.testing import layered
 import unittest
 import robotsuite
 
-from bsuttor.blog.testing import BSUTTOR_BLOG_ROBOT_TESTING
+from blog.post.testing import BLOG_POST_ROBOT_TESTING
 
 
 def test_suite():
@@ -15,6 +15,6 @@ def test_suite():
     for robot_file in robots_file:
         rts = robotsuite.RobotTestSuite(robot_file)
         suite.addTests([
-            layered(rts,  layer=BSUTTOR_BLOG_ROBOT_TESTING)
+            layered(rts,  layer=BLOG_POST_ROBOT_TESTING)
         ])
     return suite

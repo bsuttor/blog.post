@@ -19,14 +19,14 @@
         name="blogs_view"
         class=".blogs_view.BlogsView"
         template="templates/blogs_view.pt"
-        layer="..interfaces.IBsuttorBlogLayer"
+        layer="..interfaces.IBlogPostLayer"
         permission="zope2.View"
         />
     
     <browser:page
         for="blog.post.blog_post.IBlogPost"
         name="blog_view"
-        layer="..interfaces.IBsuttorBlogLayer"
+        layer="..interfaces.IBlogPostLayer"
         class=".blog_view.BlogView"
         template="templates/blog_view.pt"
         permission="zope2.View"

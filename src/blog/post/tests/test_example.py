@@ -5,10 +5,11 @@ from zope.traversing.interfaces import BeforeTraverseEvent
 
 from Products.CMFCore.utils import getToolByName
 
-from bsuttor.blog.testing import BSUTTOR_BLOG_INTEGRATION
+from blog.post.testing import BLOG_POST_INTEGRATION
+
 
 class TestIntegration(unittest.TestCase):
-    layer = BSUTTOR_BLOG_INTEGRATION
+    layer = BLOG_POST_INTEGRATION
 
     def setUp(self):
         self.app = self.layer['app']
@@ -21,7 +22,7 @@ class TestIntegration(unittest.TestCase):
             installed
         """
         qi_tool = getToolByName(self.portal, 'portal_quickinstaller')
-        pid = 'bsuttor.blog'
+        pid = 'blog.post'
         installed = [p['id'] for p in qi_tool.listInstalledProducts()]
         self.assertTrue(pid in installed,
                     'package appears not to have been installed')
