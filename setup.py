@@ -28,7 +28,7 @@ setup(
     url='http://pypi.python.org/pypi/blog.post',
     license='GPL',
     packages=find_packages('src', exclude=['ez_setup']),
-    namespace_packages=['bsuttor'],
+    namespace_packages=['blog'],
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
