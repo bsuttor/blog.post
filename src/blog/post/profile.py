@@ -7,4 +7,4 @@ class HiddenProfiles(object):
     implements(INonInstallable)
 
     def getNonInstallableProfiles(self):
-        return ['bsuttor.blog:uninstall']
+        return ['blog.post:uninstall']

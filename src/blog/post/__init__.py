@@ -3,7 +3,7 @@
 
 from zope.i18nmessageid import MessageFactory
 
-_ = MessageFactory('bsuttor.blog')
+_ = MessageFactory('blog.post')
 
 
 def initialize(context):

@@ -2,6 +2,6 @@
 <metadata>
   <version>1</version>
   <dependencies>
-      <dependency>profile-bsuttor.blog:default</dependency>
+      <dependency>profile-blog.post:default</dependency>
   </dependencies>
 </metadata>

@@ -13,7 +13,7 @@ long_description = \
     read('CHANGES.rst')
 
 setup(
-    name='bsuttor.blog',
+    name='blog.post',
     version='0.1',
     description="This package is use to create a Plone blog site",
     long_description=long_description,
@@ -25,8 +25,8 @@ setup(
     keywords='Plone Python',
     author='Benoît Suttor',
     author_email='ben.suttor@gmail.com',
-    url='http://pypi.python.org/pypi/bsuttor.blog',
-    license='BSD',
+    url='http://pypi.python.org/pypi/blog.post',
+    license='GPL',
     packages=find_packages('src', exclude=['ez_setup']),
     namespace_packages=['bsuttor'],
     package_dir={'': 'src'},
@@ -35,6 +35,9 @@ setup(
     install_requires=[
         'Plone',
         'setuptools',
+        'plone.app.discussion',
+        'collective.quickupload',
+        'collective.contentrules.yearmonth',
     ],
     extras_require={
         'test': [

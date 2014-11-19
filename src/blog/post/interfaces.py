@@ -2,5 +2,5 @@
 from zope.interface import Interface
 
 
-class IBsuttorBlogLayer(Interface):
+class IBlogPostLayer(Interface):
     """Marker interface that defines a Zope 3 browser layer."""
