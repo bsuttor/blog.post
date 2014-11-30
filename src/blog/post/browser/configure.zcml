@@ -17,9 +17,9 @@
     <browser:page
         for="*"
         name="blogs_view"
+        layer="..interfaces.IBlogPostLayer"
         class=".blogs_view.BlogsView"
         template="templates/blogs_view.pt"
-        layer="..interfaces.IBlogPostLayer"
         permission="zope2.View"
         />
     

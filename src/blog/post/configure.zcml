@@ -17,9 +17,6 @@
     <include package=".browser" />
 
     <include package="plone.app.discussion" />
-    <include package="collective.contentrules.yearmonth" />
-    <include package="collective.quickupload" />
-
 
 
     <!-- Register the installation GenericSetup extension profile -->
@@ -53,5 +50,11 @@
 
 
     <i18n:registerTranslations directory="locales" />
+
+    <subscriber
+        for=".blog_post.IBlogPost
+            zope.lifecycleevent.interfaces.IObjectCreatedEvent"
+        handler=".blog_post.created"
+        />
 
 </configure>

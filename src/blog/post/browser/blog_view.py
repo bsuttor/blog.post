@@ -2,6 +2,7 @@
 from Products.Five.browser import BrowserView
 from plone.app.discussion.interfaces import IConversation
 from plone import api
+from blog.post.browser import utils
 
 
 class BlogView(BrowserView):
@@ -26,10 +27,7 @@ class BlogView(BrowserView):
             return False
 
     def get_author_name(self):
-        username = self.context.Creator()
-        user = api.user.get(username=username)
-        name = user.getProperty('fullname')
-        return name
+        return utils.get_author_name(self.context)
 
     def get_author_url(self):
-        return ""
+        return utils.get_author_url(self.context)

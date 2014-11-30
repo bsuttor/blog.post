@@ -36,8 +36,6 @@ setup(
         'Plone',
         'setuptools',
         'plone.app.discussion',
-        'collective.quickupload',
-        'collective.contentrules.yearmonth',
     ],
     extras_require={
         'test': [
