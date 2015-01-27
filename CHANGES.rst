@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.1b2 (unreleased)
+0.1b2 (2015-01-27)
 ------------------
 
 - View image if image exists.
