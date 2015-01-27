@@ -28,19 +28,15 @@
           tal:define="text python:context.text.raw;
                       len_text python:len(text.strip())">
 
-        <div class="newsImageContainer"
-             tal:condition="context/getImage|nothing">
-               <img tal:replace="structure python: context.tag(scale='mini',
-               css_class='newsImage', alt=context.imageCaption,
-               title=context.imageCaption)" src="" alt="" />
-            <p class="discreet" tal:condition="context/imageCaption|nothing">
-              <metal:field use-macro="python:context.widget('imageCaption', mode='view')">
-              Image Caption
-              </metal:field>
-            </p>
+
+        <div class="blog_picture" tal:define="picture nocall:context/image" tal:condition="nocall:picture">
+            <img tal:attributes="src string:${context/absolute_url}/@@download/image/${picture/filename};
+                height picture/_height | nothing;
+                width picture/_width | nothing;"
+            />
         </div>
 
-            <div metal:define-slot="inside" tal:replace="structure text">The body</div>
+        <div metal:define-slot="inside" tal:replace="structure text">The body</div>
     </metal:block>
 </metal:content-core>
 

@@ -11,7 +11,7 @@
 <div metal:fill-slot="content-core">
 <metal:block define-macro="content-core">
 <tal:articles tal:repeat="post view/get_articles">
-<article tal:attributes="id post/id;">
+<article class="blog_articles"  tal:attributes="id post/id;">
     <header class="post-header">
         <h1 class="post-title" tal:define="title post/title">
             <a tal:attributes="href string:${post/url}; title post/title;" rel="bookmark" tal:content="post/title"></a>
@@ -35,6 +35,13 @@
         </div>
     </header>
     <!--div class="article-image" tal:condition="post/image_tag" tal:content="structure post/image_tag" ></div-->
+
+    <div class="blog_picture" tal:define="picture nocall:post/picture" tal:condition="nocall:picture">
+        <img tal:attributes="src string:${post/url}/@@download/image/${picture/filename};
+            height picture/_height | nothing;
+            width picture/_width | nothing;"
+        />
+    </div>
     <div class="article-content" tal:content="structure post/text"></div>
 
     <footer class="entry-meta">
@@ -66,7 +73,7 @@
         </span>
     </footer>
 </article>
-
+<hr>
             <div metal:use-macro="context/batch_macros/macros/navigation" />
 </tal:articles>
 
