@@ -14,7 +14,7 @@ long_description = \
 
 setup(
     name='blog.post',
-    version='0.1b2',
+    version='0.1b3.dev0',
     description="This package is use to create a Plone blog site",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
