@@ -32,4 +32,19 @@
         permission="zope2.View"
         />
 
+
+    <adapter
+        factory=".blog_view.RssAdapter"
+        for="blog.post.blog_post.IBlogPost
+             Products.CMFPlone.interfaces.syndication.IFeed"
+        provides="Products.CMFPlone.interfaces.syndication.IFeedItem" />
+
+    <browser:viewlet
+        name="plone.logo"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".logo.BlogLogoViewlet"
+        layer="..interfaces.IBlogPostLayer"
+        permission="zope2.View"
+        />
+
 </configure>

@@ -25,6 +25,6 @@ Then, install `blog.post` using the Add-ons control panel.
 
 Configuration
 =============
-
-...
+You can override plone logo. 
+Simply add an image on root of site named `bloglogo.png`.
 
