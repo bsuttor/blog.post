@@ -13,7 +13,9 @@ class BlogsView(BrowserView):
             catalog = getToolByName(self.context, 'portal_catalog')
             # Use path or not ?
             query = {'portal_type': 'blog_post',
-                     'review_state': 'published'}
+                     'review_state': 'published',
+                     'sort_on': 'created',
+                     'sort_order': 'descending'}
             brains = catalog(query)
         else:
             brains = self.context.queryCatalog()
@@ -30,6 +32,8 @@ class BlogsView(BrowserView):
             post['author_url'] = utils.get_author_url(blog_post)
             post['human_date'] = utils.get_humain_time(blog_post)
             post['date'] = brain.effective_date
+            post['picture'] = blog_post.image
+
             articles.append(post)
 
         return articles
