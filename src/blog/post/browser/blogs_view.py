@@ -11,11 +11,11 @@ class BlogsView(BrowserView):
         articles = []
         if self.context.portal_type not in ('Topic', 'Collection'):
             catalog = getToolByName(self.context, 'portal_catalog')
-            # Use path or not ?
             query = {'portal_type': 'blog_post',
                      'review_state': 'published',
                      'sort_on': 'created',
                      'sort_order': 'descending'}
+            query['path'] = {'query': '/'.join(self.context.getPhysicalPath()), 'depth': 3}
             brains = catalog(query)
         else:
             brains = self.context.queryCatalog()
