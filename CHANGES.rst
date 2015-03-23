@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.1b3 (unreleased)
+0.1b3 (2015-03-23)
 ------------------
 
 - Add query path for folder blogs view.
