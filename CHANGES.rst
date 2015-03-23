@@ -4,7 +4,8 @@ Changelog
 0.1b3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add query path for folder blogs view.
+  [bsuttor]
 
 
 0.1b2 (2015-01-27)
