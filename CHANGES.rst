@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.1b4 (unreleased)
+0.1b4 (2015-08-04)
 ------------------
 
 - Fix template for Plone 5.
