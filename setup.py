@@ -36,6 +36,7 @@ setup(
         'Plone',
         'setuptools',
         'plone.app.discussion',
+        'plone.api'
     ],
     extras_require={
         'test': [
