@@ -4,7 +4,8 @@ Changelog
 0.1b4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix template for Plone 5.
+  [bsuttor]
 
 
 0.1b3 (2015-03-23)
